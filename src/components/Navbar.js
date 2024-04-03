@@ -3,6 +3,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import { Button, Menu } from 'semantic-ui-react';
 import { useDispatch } from 'react-redux';
 import { setUser, clearUser } from '../redux/actions'; 
+import config from '../config';
 
 const Navbar = () => {
   const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
@@ -28,7 +29,7 @@ const Navbar = () => {
           </Menu.Item>
         ) : (
           <Menu.Item>
-            <Button negative onClick={() => logout({ returnTo: window.location.origin })}>
+            <Button negative onClick={() => logout({ returnTo: config.homeUrl })}>
               Log Out
             </Button>
           </Menu.Item>

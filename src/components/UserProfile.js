@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Card, Image, Container, Header } from "semantic-ui-react";
+
 const UserProfile = () => {
   const user = useSelector(state => state.auth.user);
   
