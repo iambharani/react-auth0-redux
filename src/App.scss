@@ -1,0 +1,10 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    .card-image {
+        margin: 20px auto !important;
+        border-radius: 50% !important; 
+      }
+}
